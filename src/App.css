@@ -4,7 +4,21 @@
   background-color: #ffffff;
   padding: 1em 0.75em;
   box-shadow: 0 0 0.5px 5px #ffff;
+  text-align: center;
 }
-/* .status_text{
+.status_text{
+  font-size: 2em;
+  font-weight: 300;
+}
+.temp_text{
+  font-size: 1.5em;
+  font-weight: 400;
+}
 
-} */
+.location_text,
+.date_text{
+  font-size: 1em;
+  font-weight: 300;
+  margin: 0;
+  padding: 0.45em;
+}
