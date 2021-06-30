@@ -1,6 +1,4 @@
 .container{
-  border-radius: 24px;
-  padding: 1em 0.75em;
   text-align: center;
 }
 .search-box{
@@ -33,6 +31,15 @@ input::placeholder{
 }
 
 .thin_text{
-  font-weight: 100;
+  font-weight: bold;
   font-size: 1em;
+}
+.temp_text{
+  font-weight: lighter;
+  font-size: 4em;
+  margin: 0;
+}
+
+.info-section{
+  margin-top: 3em;
 }

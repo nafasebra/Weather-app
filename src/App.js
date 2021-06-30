@@ -44,29 +44,33 @@ function App() {
           onKeyPress={(e) => search(e)}
           />
       </div>
-      {/* {(typeof weather.main !== "undefined") ? (
-        <div className="info_section">
-          <h2 className="status_text">{weather.weather[0].main}</h2>
-          <p className="status-desc_text">
+      {(typeof weather.main !== "undefined") ? (
+        <div className="info-section">
+          <h2>{weather.weather[0].main}</h2>
+          <p className="thin_text">
             {weather.weather[0].description}
           </p>
           <h4 className="temp_text">
             {Math.round(weather.main.temp / 10)}°
           </h4>
-          <p className="location_text">{weather.name}, {weather.sys.country}</p>
-          <p className="date_text">{dateHandler(new Date())}</p>
+          <p className="thin_text">{weather.name}, {weather.sys.country}</p>
+          <p className="thin_text">{dateHandler(new Date())}</p>
         </div>
-      ) : ('')} */}
-      
-      <p className="thin_text">{dateHandler(new Date())}</p>
-      <p className="thin_text">Tehran, Iran</p>
-      <h4 className="temp_text">
-        20°
-      </h4>
-      <h2 className="big_text">Suuny</h2>
-      <p className="thin_text">
-        very sunny
-      </p>
+      ) : (
+        <p style={{marginTop: "3em"}}>Nothing for display data :)</p>
+      )}
+{/*       
+      <div className="info-section">
+        <p className="thin_text">{dateHandler(new Date())}</p>
+        <p className="thin_text">Tehran, Iran</p>
+        <h4 className="temp_text">
+          20°
+        </h4>
+        <h2 className="big_text">Suuny</h2>
+        <p className="thin_text">
+          very sunny
+        </p>
+      </div> */}
     </div>
   );
 }
