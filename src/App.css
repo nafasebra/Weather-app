@@ -1,24 +1,38 @@
 .container{
-  width: 230px;
   border-radius: 24px;
-  background-color: #ffffff;
   padding: 1em 0.75em;
-  box-shadow: 0 0 0.5px 5px #ffff;
   text-align: center;
 }
-.status_text{
-  font-size: 2em;
-  font-weight: 300;
+.search-box{
+  width: 50vw;
 }
-.temp_text{
-  font-size: 1.5em;
-  font-weight: 400;
+@media (max-width: 556px){
+  .search-box{
+    width: 80vw;
+  }
+}
+@media (min-width: 1200px){
+  .search-box{
+    width: 35vw;
+  }
+}
+input{
+  border: none;
+  width: 100%;
+  padding: 1em 1.2em;
+  border-radius: 5px;
+  margin-top: 1em;
+  box-shadow: 0 2px 5px 0.5px #ccccccb0;
+  color: #707070;
+}
+input:focus{
+  outline: none;
+}
+input::placeholder{
+  color: #aaa;
 }
 
-.location_text,
-.date_text{
+.thin_text{
+  font-weight: 100;
   font-size: 1em;
-  font-weight: 300;
-  margin: 0;
-  padding: 0.45em;
 }

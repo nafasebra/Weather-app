@@ -13,17 +13,10 @@ function App() {
   const search = e => {
     setQuery(e.target.value);
     if(e.key === "Enter"){
-      fetch(`${api.baseLink}weather?q=${query}&units=metric&APPID=${api.key}`)
-        .then(res => {
-          res.json()
-          console.log(query);
-          console.log(res);
-        })
-        .then(result => {
-          setWeather(result);
-          setQuery('');
-          console.log(result);
-        });
+      setWeather({});
+      fetch(`${api.baseLink}weather?q=${query}&appid=${api.key}`)
+        .then((response) => response.json())
+        .then((result) => setWeather(result))
     }
   }
 
@@ -45,16 +38,35 @@ function App() {
       <div className="search-box">
         <input 
           type="text"
-          placeholder="search"
+          placeholder="search..."
           onChange={(e) => search(e)} 
           value={query}
           onKeyPress={(e) => search(e)}
           />
       </div>
-      <h2 className="status_text">Sunny</h2>
-      <h4 className="temp_text">50<small><sup>&#9675;</sup></small>C</h4>
-      <p className="location_text">Kashan city, iran</p>
-      <p className="date_text">{dateHandler(new Date())}</p>
+      {/* {(typeof weather.main !== "undefined") ? (
+        <div className="info_section">
+          <h2 className="status_text">{weather.weather[0].main}</h2>
+          <p className="status-desc_text">
+            {weather.weather[0].description}
+          </p>
+          <h4 className="temp_text">
+            {Math.round(weather.main.temp / 10)}°
+          </h4>
+          <p className="location_text">{weather.name}, {weather.sys.country}</p>
+          <p className="date_text">{dateHandler(new Date())}</p>
+        </div>
+      ) : ('')} */}
+      
+      <p className="thin_text">{dateHandler(new Date())}</p>
+      <p className="thin_text">Tehran, Iran</p>
+      <h4 className="temp_text">
+        20°
+      </h4>
+      <h2 className="big_text">Suuny</h2>
+      <p className="thin_text">
+        very sunny
+      </p>
     </div>
   );
 }

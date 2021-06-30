@@ -1,6 +1,4 @@
-*,
-*::before,
-*::after{
+*, ::before, ::after{
   box-sizing: border-box;
 }
 
@@ -11,14 +9,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #2980b9;
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 100vh;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  overflow-x: hidden;
 }
