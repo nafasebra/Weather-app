@@ -5,6 +5,7 @@
 
 Features: 
  - Use API for get (fetch) weather data
+ - I use Google fonts API for include 'poppins' font
  - Search the weather by city name
  - Responsive
  - Simple UI
