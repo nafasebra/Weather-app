@@ -59,18 +59,6 @@ function App() {
       ) : (
         <p style={{marginTop: "3em"}}>Nothing for display data :)</p>
       )}
-{/*       
-      <div className="info-section">
-        <p className="thin_text">{dateHandler(new Date())}</p>
-        <p className="thin_text">Tehran, Iran</p>
-        <h4 className="temp_text">
-          20°
-        </h4>
-        <h2 className="big_text">Suuny</h2>
-        <p className="thin_text">
-          very sunny
-        </p>
-      </div> */}
     </div>
   );
 }
