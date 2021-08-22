@@ -10,11 +10,6 @@ Features:
  - Responsive
  - Simple UI
 
-for clone this repository: 
-```
-
-```
-
 
 <br>
 
